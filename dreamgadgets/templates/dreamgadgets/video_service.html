@@ -1,0 +1,103 @@
+{% load i18n %}<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<link href='//fonts.googleapis.com/css?family=Ubuntu:500,700' rel='stylesheet' type='text/css'>
+<style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+    body {
+        font-family: 'Ubuntu';
+        font-weight: 700;
+        font-size: 14px;
+        overflow: hidden;
+    }
+    #content {
+        height: 245px;
+        padding: 0 25px;
+        padding-top: 90px;
+    }
+    #content:hover {
+        background: url('/static/dreamgadgets/img/video_service/video_service_bg_active.png') no-repeat left top;
+    }
+    #gadget {
+        background: url('/static/dreamgadgets/img/video_service/video_service_bg.png') no-repeat left top;
+        height: 400px;
+        width: 300px;
+        position:absolute;
+        left: 50%;
+        top: 50%;
+        margin: -200px 0 0 -150px;
+    }
+    #bubble {
+        width: 108px;
+        min-height: 114px;
+        color: #ad7912;
+    }
+    #top {
+        background: url('/static/dreamgadgets/img/video_service/textTop.png') no-repeat left top;
+        height: 14px;
+    }
+    #bottom {
+        background: url('/static/dreamgadgets/img/video_service/textBot.png') no-repeat left top;
+        height: 30px;
+    }
+    #center {
+        background: url('/static/dreamgadgets/img/video_service/textCen.png') repeat left top;
+        min-height: 50px;
+        text-align: center;
+    }
+    #center p {
+        padding: 10px 15px;
+        line-height: 16px;
+    }
+    #footer {
+        text-align: right;
+        padding: 10px;
+        color: #fff;
+        font-size: 10px;
+    }
+    #lisence {
+        background: url('/static/dreamgadgets/img/video_service/lisence.png') no-repeat left top;
+        margin-top: -18px;
+        height: 63px;
+        width: 127px;
+        float: left;
+    }
+    .corner {
+        position: absolute;
+        background: url(/static/dreamgadgets/img/generic_elements/white_corners.png);
+        width: 8px; height: 8px;
+    }
+        #corner-ne {
+            top: 0; left: 0;
+        }
+        #corner-nw {
+            top: 0; right: 0;
+            background-position: 8px 0;
+        }
+        #corner-sw {
+            bottom: 0; right: 0;
+            background-position: 8px 8px;
+        }
+        #corner-se {
+            bottom: 0; left: 0;
+            background-position: 0 8px;
+        }
+
+</style>
+</head>
+<body>
+    
+    <div id="gadget">
+        <a href="http://movies.dreamschool.fi" target="_blank" style="text-decoration: none;">
+            <div id="content">
+            </div>
+        </a>
+        <div id="footer"><span id="lisence"></span><p>{% trans "Service provider" %}:<br />{% trans "FinnAble 2020 -project" %}<br />{% trans "#copyright" %}</p></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+{% load i18n %}<!doctype html>
+<html>
+  <head>
+    <link href='//fonts.googleapis.com/css?family=Ubuntu:700' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+      body {
+        font-family: 'Ubuntu', sans-serif;
+		background: #fff;
+      }
+      #main-container {
+        position: absolute;
+        width: auto; height: auto;
+        top: 0; left: 0;
+        right: 0; bottom: 0;
+        overflow: hidden;
+      }
+      #content {
+        position: absolute;
+        width: auto; height: auto;
+        top: 0; left: 0; right: 0;
+        bottom: 57px;
+      }
+        #main-bg {
+          position: absolute;
+          width: 100%; height: 100%;
+          top: 0; left: 0;
+        }
+        #main-bg-sunburst {
+          position: absolute;
+          width: 100%; height: 48%;
+          top: 0; left: 0;
+        }
+        #title {
+          position: absolute;
+          top: 12%; left: 50%;
+          display: block;
+          margin-left: -118px;
+        }
+        #center {
+          position: absolute;
+          top: 50%; left: 0;
+          width: 100%; height: 100%;
+        }
+          #branch {
+            position: absolute;
+            top: 60px; right: 0;
+            width: 92%; height: 64px;
+          }
+          #middle {
+            position: absolute;
+            top: 0; left: 50%;
+            width: 100%; height: 100%;
+          }
+            #link-image {
+              position: absolute;
+              top: -60px; left: -120px;
+              border: 0;
+              background: url('/static/dreamgadgets/img/unelmasalkku/unelmasalkku_link_button.png') no-repeat 0 0;
+            }
+            #link-image:hover {
+              background-position: 0 -177px;
+            }
+      #footer {
+        position: absolute;
+        width: auto;
+        height: 57px;
+        left: 0; right: 0; bottom: 0;
+      }
+        #footer-bg {
+          position: absolute;
+          bottom: 0; left: 0;
+          width: 100%; height: 77px;
+        }
+        #footer-license {
+          position: absolute;
+          top: -14px; left: 16px;
+          border: 0;
+        }
+        #footer-text {
+          position: absolute;
+          bottom: 20px; right: 10px;
+        }
+      .corner {
+        position: absolute;
+        background: url('/static/dreamgadgets/img/generic_elements/white_corners.png');
+        width: 8px; height: 8px;
+      }
+        #corner-ne {
+          top: 0; left: 0;
+        }
+        #corner-nw {
+          top: 0; right: 0;
+          background-position: 8px 0;
+        }
+        #corner-sw {
+          bottom: 0; right: 0;
+          background-position: 8px 8px;
+        }
+        #corner-se {
+          bottom: 0; left: 0;
+          background-position: 0 8px;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="main-container">
+      <div id="content">
+        <img src="/static/dreamgadgets/img/unelmasalkku/unelmasalkku_bg_sky.png" alt="" id="main-bg" />
+        <img src="/static/dreamgadgets/img/unelmasalkku/unelmasalkku_bg_sunburst.png" alt="" id="main-bg-sunburst" />
+        <img src="/static/dreamgadgets/img/unelmasalkku/unelmasalkku_title.png" alt="" id="title" />
+        <div id="center">
+          <img src="/static/dreamgadgets/img/unelmasalkku/unelmasalkku_props_branch.png" alt="" id="branch" />
+          <div id="middle">
+            <a href="https://diary.dreamschool.fi" target="_blank">
+              <img src="/static/dreamgadgets/img/unelmasalkku/unelmasalkku_link_props.png" alt="" id="link-image" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <img src="/static/dreamgadgets/img/unelmasalkku/unelmasalkku_footer_bg.png" alt="" id="footer-bg" />
+        <!--<a href="#" target="_blank">-->
+          <img src="/static/dreamgadgets/img/unelmasalkku/license_button_national_sky.png" alt="Internal license" id="footer-license" />
+        <!--</a>-->
+        <img src="/static/dreamgadgets/img/unelmasalkku/copyright_footer_unelmasalkku.png" id="footer-text" alt="Kehittäjät: Sari Jarva, Marjo Kekki. Toteuttaja: Haltu Oy &copy; Dreamschool 2011-2012" />
+      </div>
+    </div>
+  </body>
+</html>

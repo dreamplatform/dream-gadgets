@@ -1,0 +1,120 @@
+{% load i18n %}<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<link href='//fonts.googleapis.com/css?family=Ubuntu:700' rel='stylesheet' type='text/css'>
+<style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+    a {
+        text-decoration: none;
+    }
+    body {
+        font-family: 'Ubuntu';
+        font-size: 14px;
+        overflow: hidden;
+    }
+    #content {
+        height: 345px;
+    }
+    #content:hover #bubble {
+        color: #452D66;
+    } 
+    #gadget {
+        background: url('/static/dreamgadgets/img/pelitehdas/bg.png') no-repeat left top;
+        height: 400px;
+        width: 300px;
+        position:absolute;
+        left: 50%;
+        top: 50%;
+        margin: -200px 0 0 -150px;
+    }
+    #bubble {
+        padding: 100px 0 0 155px;
+        width: 121px;
+        min-height: 114px;
+        display: block;
+        color: #2d4466;
+    }
+    #top {
+        background: url('/static/dreamgadgets/img/pelitehdas/textTop.png') no-repeat left top;
+        height: 20px;
+    }
+    #bottom {
+        background: url('/static/dreamgadgets/img/pelitehdas/textBot.png') no-repeat left top;
+        height: 30px;
+    }
+    #center {
+        background: url('/static/dreamgadgets/img/pelitehdas/textCen.png') repeat left top;
+        min-height: 43px;
+        text-align: center;
+    }
+    #center p {
+        padding: 2px 15px;
+        line-height: 16px;
+        font-weight: 500;
+    }
+    #footer {
+        bottom: 15px;
+        left: 0;
+        right: 0;
+        position: absolute;
+        width: auto;
+        text-align: right;
+        padding: 0 15px;
+        color: #fff;
+        font-size: 10px;
+        font-weight: 700;
+    }
+    #lisence {
+        background: url('/static/dreamgadgets/img/pelitehdas/lisence.png') no-repeat left top;
+        height: 66px;
+        width: 126px;
+        float: left;
+        left: 10px;
+        position: absolute;
+        bottom: -10px;
+    }
+    .corner {
+        position: absolute;
+        background: url(/static/dreamgadgets/img/generic_elements/white_corners.png);
+        width: 8px; height: 8px;
+    }
+        #corner-ne {
+            top: 0; left: 0;
+        }
+        #corner-nw {
+            top: 0; right: 0;
+            background-position: 8px 0;
+        }
+        #corner-sw {
+            bottom: 0; right: 0;
+            background-position: 8px 8px;
+        }
+        #corner-se {
+            bottom: 0; left: 0;
+            background-position: 0 8px;
+        }
+
+
+</style>
+</head>
+<body>
+    
+    <div id="gadget">
+        <a href="http://games.dreamschool.fi" target="_blank">
+            <div id="content">
+                <div id="bubble">
+                    <div id="top"></div>
+                    <div id="center"><p>{% trans "Go to service" %}</p></div>
+                    <div id="bottom"></div>
+                </div>
+            </div>
+        </a>
+        <div id="footer"><span id="lisence"></span>&copy;{% trans "Flow Factory" %}</div>
+    </div>
+</body>
+</html>

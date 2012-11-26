@@ -1,0 +1,130 @@
+{% load i18n %}<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<link href='//fonts.googleapis.com/css?family=Ubuntu:500,700' rel='stylesheet' type='text/css'>
+<style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+    body {
+        font-family: 'Ubuntu';
+        font-size: 14px;
+        overflow: hidden;
+    }
+    a {
+        text-decoration: none;
+    }
+    #content {
+        height: 338px;
+        padding: 0 17px;
+        padding-top: 20px;
+    }
+    #content:hover span {
+        color: #006B5B;
+    }
+	.mouseOn {
+		display: none;
+        line-height: 25px;
+	}
+    #content:hover .mouseOn {
+        display: inline;
+    }
+    #content:hover .mouseOff {
+        display: none;
+    }
+    #gadget {
+        background: url('/static/dreamgadgets/img/google_calendar/bg.png') no-repeat left top;
+        height: 400px;
+        width: 300px;
+        position:absolute;
+        left: 50%;
+        top: 50%;
+        margin: -200px 0 0 -150px;
+    }
+    #bubble {
+        width: 260px;
+        min-height: 114px;
+        color: #37b09d;
+    }
+    #top {
+        background: url('/static/dreamgadgets/img/google_calendar/textTop.png') no-repeat left top;
+        height: 28px;
+    }
+    #bottom {
+        background: url('/static/dreamgadgets/img/google_calendar/textBot.png') no-repeat left top;
+        height: 41px;
+    }
+    #center {
+        background: url('/static/dreamgadgets/img/google_calendar/textCen.png') repeat left top;
+        min-height: 55px;
+        text-align: center;
+    }
+    #center p {
+        padding: 10px 45px;
+        line-height: 16px;
+        font-weight: 500;
+    }
+
+    #footer {
+        bottom: 15px;
+        left: 0;
+        right: 0;
+        position: absolute;
+        width: auto;
+        text-align: right;
+        padding: 0 15px;
+        color: #fff;
+        font-size: 10px;
+        font-weight: 700;
+    }
+    #lisence {
+        background: url('/static/dreamgadgets/img/license_icons/license_01.png') no-repeat left top;
+        height: 64px;
+        width: 64px;
+        float: left;
+        left: 10px;
+        position: absolute;
+        bottom: -10px;
+    }
+    .corner {
+        position: absolute;
+        background: url('/static/dreamgadgets/img/generic_elements/white_corners.png');
+        width: 8px; height: 8px;
+    }
+        #corner-ne {
+            top: 0; left: 0;
+        }
+        #corner-nw {
+            top: 0; right: 0;
+            background-position: 8px 0;
+        }
+        #corner-sw {
+            bottom: 0; right: 0;
+            background-position: 8px 8px;
+        }
+        #corner-se {
+            bottom: 0; left: 0;
+            background-position: 0 8px;
+        }
+
+</style>
+</head>
+<body>
+    
+    <div id="gadget">
+        <div id="content">
+            <a href="http://calendar.google.com" target="_blank">
+                <div id="bubble">
+                    <div id="top"></div>
+                    <div id="center"><p><span class="mouseOff">{% trans "Don't forget your next event!" %}</span><span class="mouseOn">{% trans "Go to calendar!" %}</span></p></div>
+                    <div id="bottom"></div>
+                </div>
+            </a>
+        </div>
+        <div id="footer"><span id="lisence"></span>{% trans "#copyright" %}</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+{% load i18n %}<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<link href='//fonts.googleapis.com/css?family=Ubuntu:700' rel='stylesheet' type='text/css'>
+<style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        overflow: hidden;
+    }
+    h2 {
+        height: 46px;
+        background: url('/static/dreamgadgets/img/steinerkoulu/espoo_passive.png') no-repeat left top;
+    }
+    h2:hover {
+        background: url('/static/dreamgadgets/img/steinerkoulu/espoo_active.png') no-repeat left top;
+    }
+    h2 a {
+        width: 218px;
+        height: 46px;
+        line-height: 46px;
+        display: block;
+        text-align: center;
+        color: #fff;
+        text-decoration: none;
+        text-shadow: 1px 1px 0 rgba(0,0,0,.5);
+        font-family: 'Ubuntu';
+        font-size: 19px;
+    }
+    #menu {
+        background: url('/static/dreamgadgets/img/steinerkoulu/espoo_services.png') no-repeat center top;
+        padding-top: 275px;
+        height: 125px;
+    }
+    #gadget {
+        background: url('/static/dreamgadgets/img/steinerkoulu/bg_espoo_services.png') no-repeat left top;
+        padding: 0 42px;
+        height: 400px;
+        position:absolute;
+        left: 50%;
+        top: 50%;
+        margin: -200px 0 0 -150px;
+    }
+    .corner {
+        position: absolute;
+        background: url('/static/dreamgadgets/img/generic_elements/white_corners.png');
+        width: 8px; height: 8px;
+    }
+        #corner-ne {
+            top: 0; left: 0;
+        }
+        #corner-nw {
+            top: 0; right: 0;
+            background-position: 8px 0;
+        }
+        #corner-sw {
+            bottom: 0; right: 0;
+            background-position: 8px 8px;
+        }
+        #corner-se {
+            bottom: 0; left: 0;
+            background-position: 0 8px;
+        }
+
+</style>
+</head>
+<body>
+    
+    <div id="gadget">
+        <div id="menu">
+            <h2><a href="http://espoonsteiner.starsoft.fi" target="_blank">{% trans "Wilma" %}</a></h2>
+            <h2><a href="http://mail.tdc.fi/zimbra/" target="_blank">{% trans "E-mail" %}</a></h2>
+        </div>
+    </div>
+</body>
+</html>

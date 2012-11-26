@@ -1,0 +1,2 @@
+recursive-include dreamgadgets/static *
+recursive-include dreamgadgets/templates *

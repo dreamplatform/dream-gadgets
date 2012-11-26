@@ -1,0 +1,124 @@
+{% load i18n %}<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<link href='//fonts.googleapis.com/css?family=Ubuntu:700' rel='stylesheet' type='text/css'>
+<style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        overflow: hidden;
+    }
+    a {
+        text-decoration: none;
+    }
+    #header {
+        background: url('/static/dreamgadgets/img/innoomnia/header.png') no-repeat left top;
+        height: 160px;
+    }
+    #gadget {
+        background: url('/static/dreamgadgets/img/innoomnia/bg.png') no-repeat left top;
+        height: 400px;
+        width: 300px;
+        position:absolute;
+        left: 50%;
+        top: 50%;
+        margin: -200px 0 0 -150px;
+        font-size: 12px;
+        font-family: 'Ubuntu';
+    }
+    #bubble {
+        margin-top: -80px;
+        margin-left: 110px;
+        width: 118px;
+        color: #2b78b2;
+        font-size: 14px;
+        display: none;
+    }
+    #gadget:hover #bubble {
+        display: block;
+    }
+    #top {
+        background: url('/static/dreamgadgets/img/innoomnia/textTop.png') no-repeat left top;
+        height: 24px;
+    }
+    #bottom {
+        background: url('/static/dreamgadgets/img/innoomnia/textBot.png') no-repeat left top;
+        height: 36px;
+    }
+    #center {
+        background: url('/static/dreamgadgets/img/innoomnia/textCen.png') repeat left top;
+        min-height: 24px;
+        text-align: center;
+    }
+    #center p {
+        padding: 2px 25px;
+        font-weight: 500;
+    }
+    #footer {
+        text-align: right;
+        color: #fff;
+        position:absolute;
+        bottom:12px;
+        width:100%;
+    }
+    #footer p {
+        line-height: 66px;
+        float: left;
+        padding: 0 5px 0 25px;
+    }
+    #footer a {
+        height: 66px;
+    }
+    #unelmakoulu {
+        width: 72px;
+        background: url('/static/dreamgadgets/img/innoomnia/unelmakoulu.png') no-repeat left top;
+        display: block;
+        float: left;
+    }
+    #omnia {
+        width: 96px;
+        background: url('/static/dreamgadgets/img/innoomnia/omnia.png') no-repeat left top;
+        display: block;
+        float: left;
+        margin-right: 5px;
+    }
+    .corner {
+        position: absolute;
+        background: url(/static/dreamgadgets/img/generic_elements/white_corners.png);
+        width: 8px; height: 8px;
+    }
+        #corner-ne {
+            top: 0; left: 0;
+        }
+        #corner-nw {
+            top: 0; right: 0;
+            background-position: 8px 0;
+        }
+        #corner-sw {
+            bottom: 0; right: 0;
+            background-position: 8px 8px;
+        }
+        #corner-se {
+            bottom: 0; left: 0;
+            background-position: 0 8px;
+        }
+</style>
+</head>
+<body>
+    
+    <div id="gadget">
+        <div id="header"></div>
+            <a href="http://www.innoomnia.fi/node/128" target="_blank">
+                <div id="bubble">
+                    <div id="top"></div>
+                    <div id="center"><p>{% trans "Read more" %}!</p></div>
+                    <div id="bottom"></div>
+                </div>
+            </a>
+        <div id="footer"><p>{% trans "In cooperation with" %} </p><a href="http://www.innoomnia.fi" target="_blank" id="omnia"> </a><a href="http://www.dreamschool.fi" target="_blank" id="unelmakoulu"> </a></div>
+    </div>
+</body>
+</html>
